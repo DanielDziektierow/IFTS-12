@@ -2,12 +2,12 @@
 ## clases correspondiente como imagen.
 
 # Ej1.
-![UML](\Diagrama UML-Ejercicio1.jpg)
+![UML](Diagrama%20UML-Ejercicio1.jpg)
 # Ej2.
-![UML](\Diagrama UML-Ej2.jpg)
+![UML](Diagrama%20UML-Ej2.jpg)
 
 # Ej3.
-![UML](\Diagrama UML-Ej3.jpg)
+![UML](Diagrama%20UML-Ej3.jpg)
 
 # Ej4.
-![UML](\Diagrama UML-Ej4.jpg)
+![UML](Diagrama%20UML-Ej4.jpg)
