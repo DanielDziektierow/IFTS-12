@@ -3,14 +3,15 @@ lo es, lanza una excepción personalizada.
 """
 
 class Producto:
-        def __init__(self, precio):
+        def __init__(self, precio):     
                 try:
                     if precio >= 0:
                             self.precio= precio
                     else:
-                          raise ValueError
+                          raise ValueError      #Usamos Raise para indicar que se ha producido un error/ condicion especial.
                 except ValueError:
                     print("Perdon el numero es negativo.")
                     self.precio=0
 
-p1=Producto(45)
+# <-- Test -->
+p1=Producto(-45)
