@@ -57,5 +57,5 @@ logicaNegocio = LogicaDeNegocio(baseDatos)
 interfaz = Interfaz(logicaNegocio)
 
 # Simulación de búsqueda de libro
-interfaz.buscarFactura("003") # Salida: Libro disponible: El Principito
-#interfaz.buscarFactura("005") # Salida: Libro no encontrado
+interfaz.buscarFactura("003") # Salida: Factura disponible: 7000 Hay un dto. de 1050.0 El IVA es de 8470.0
+#interfaz.buscarFactura("005") # Salida: Factura no encontrado
