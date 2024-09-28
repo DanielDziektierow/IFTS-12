@@ -9,6 +9,6 @@ try:
 except ValueError:
     print("Error: Debes ingresar un número válido.")
 else:
-    print(f"Resultado: {res}")
+    print(f"Resultado: {res}\n")
 finally:
     print("Fin del programa.")
