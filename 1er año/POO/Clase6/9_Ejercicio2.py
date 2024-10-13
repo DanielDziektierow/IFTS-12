@@ -8,16 +8,12 @@ La capa de datos almacenará la cantidad de productos.
 # Capa de Datos
 class BaseDeDatos:
     def __init__(self):
-        self.nProducto = {"001":{
-            "Nombre":"Galletitas",
-            "Cantidad": 5},
-            "002":{
-            "Nombre":"Leche",
-            "Cantidad": 3},
-            "003":{
-            "Nombre":"polenta",
-            "Cantidad": 15
-        }}
+        self.nProducto = {"001":{"Nombre":"Galletitas",
+                                "Cantidad": 5},
+                        "002":{"Nombre":"Leche",
+                                "Cantidad": 3},
+                        "003":{"Nombre":"polenta",
+                                "Cantidad": 15}}
     def buscarProducto(self, idProducto):
         return self.nProducto.get(idProducto)
     

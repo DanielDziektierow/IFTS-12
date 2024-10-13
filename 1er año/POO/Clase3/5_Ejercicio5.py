@@ -14,13 +14,15 @@ n = randint(1,6)"""
 from random import *
 
 def AdivinarnDado(nrand, intentos):
-    intentos = 0
-    nuser = input("Adivine el numero del dado: ")
+    nuser = int(input("Adivine el numero del dado: "))
     if nuser <=0 or nuser >= 7:
-        print("Ingresar un numero del 1 al 6.")
+        print("Ingresar un numero del 1 al 6.\n")
+        AdivinarnDado(nrand, intentos)
     elif nuser == nrand:
         print("Correcto.")
     else:
+        intentos=intentos+1
+        print(f"Intento: {intentos}")
         AdivinarnDado(nrand,intentos)
     
 x = randint(1,6)

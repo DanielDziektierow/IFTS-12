@@ -10,7 +10,7 @@ class BaseDeDatos:
         "001": "UHA",
         "002": "BRC",
         "003": "IGZ"
-        }
+        } 
 
     def buscarVuelo(self, idVuelo):
         return self.nVuelo.get(idVuelo, None)

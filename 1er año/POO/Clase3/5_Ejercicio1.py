@@ -2,7 +2,7 @@
 #entre cero y un número entero positivo dado.
 
 def SumaPositivos(num):
-    if num < 0:     #Si es negativo la funcion no debe servir
+    if num < 0:                             #Si es negativo la funcion no debe servir
         return 0
     else:
         num= num + SumaPositivos(num - 1)   #Si es positivo sumamos el numero de entrada con el retorno de la funcion

@@ -4,7 +4,7 @@ Crea una subclase Perro que herede de Animal y sobreescriba el método hacer_son
 """
 
 class Animal:
-    def __init__(self, nombre, especie):
+    def __init__(self, nombre, especie):        #Constructor
         self.nombre= nombre
         self.especie= especie
 
@@ -13,8 +13,7 @@ class Animal:
 
 class Perro(Animal):
     def __init__(self, nombre, especie):
-        self.nombre= nombre
-        self.especie= especie
+        super().__init__(nombre, especie)
 
     def hacer_sonido(self):
         print("Guau")

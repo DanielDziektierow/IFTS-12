@@ -9,11 +9,15 @@ class CuentaBancaria:
         self.titular= titular
         self.saldo= saldo
     
-    def Depositar(self):
-        print("Depositando...")
+    def Depositar(self, deposito):
+        print(f"Depositando {deposito}...")
+        self.saldo=self.saldo + int(deposito)
+        print(f"Saldo de: {self.saldo}")
     
-    def Retirar(self):
-        print("Retirando...")
+    def Retirar(self, extraccion):
+        print(f"Retirando... {extraccion}")
+        self.saldo=self.saldo - extraccion
+        print(f"Saldo de: {self.saldo}")
 
 class CuentaAhorro(CuentaBancaria):
     def __init__(self, titular, saldo, interes):
@@ -21,10 +25,11 @@ class CuentaAhorro(CuentaBancaria):
         self.interes= interes
      
     def AplicarInteres(self):
-        print("Aplicando interes de "+ self.interes+ "...")
+        print(f"Aplicando interes de  {self.interes}...")
+        self.saldo= self.saldo - self.interes
 
 
-cb= CuentaAhorro("Daniel","$4", "10")
-cb.Depositar()
-cb.Retirar()
+cb= CuentaAhorro("Daniel",400, 10)
+cb.Depositar(800)
+cb.Retirar(100)
 cb.AplicarInteres()
