@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.contrib.auth  import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib.auth  import authenticate, login,logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -18,7 +18,9 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Usuario autenticado')
+                    next_url = request.POST.get('next', 'dashboard')  # Redirige al "next" o al dashboard
+                    return redirect(next_url)  # Redirigir al dashboard
+               
                 else:
                     return HttpResponse('Usuario inactivo')
             else:
@@ -64,3 +66,11 @@ def edit(request):
         'user_form':user_form,
         'profile_form':profile_form
     })
+
+def logged_out(request):
+    logout(request)
+    return render(request, 'registration/logged_out.html')
+
+@login_required
+def ubicaciones_view(request):
+    return render(request, 'account/ubicaciones.html')

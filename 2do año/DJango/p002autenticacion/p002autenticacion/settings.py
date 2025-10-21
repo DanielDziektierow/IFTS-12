@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "usuario.apps.UsuarioConfig",
+    "usuario.apps.UsuarioConfig",       #Mi aplicacion
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -128,3 +128,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # Esta es la carpeta donde 'collectstati
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL= "dashboard"
+LOGIN_URL = "usuario:login"
+LOGOUT_URL = "logout"
